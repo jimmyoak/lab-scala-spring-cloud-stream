@@ -1,0 +1,5 @@
+project(':core') {
+    dependencies {
+        compile 'org.springframework:spring-messaging:4.2.6.RELEASE'
+    }
+}

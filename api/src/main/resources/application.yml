@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: reactive-user-service
+  cloud:
+    stream:
+      kafka:
+        binder:
+          zk-nodes: localhost
+          brokers: localhost
+      bindings:
+        user-channel:
+          destination: "org.jimmyoak.services.user"
+          content-type: application/json
+          group: jimmyoak_user_group
+
+server:
+  port: 8000
+
+eureka:
+  client:
+    enabled: false
